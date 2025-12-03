@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Anos da Débora</title>
+    <!-- Carregamento do Tailwind CSS para utilitários de estilo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontes Elegantes: Playfair Display (para títulos) e Inter (para corpo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/icons8-alfabeto-96.png" type="image/x-icon">
+    <style>
+        /* Definição de Cores Pastel e Fontes */
+        :root {
+            --color-primary-light: #F3E8FF; /* Lavanda Claro */
+            --color-primary-medium: #DBCFEE; /* Rosa Acinzentado */
+            --color-accent: #9A66C0; /* Violeta Suave */
+            --color-bg: #FFFBFA; /* Branco Creme */
+            --color-text: #4A4A4A; /* Cinza Escuro */
+            --shadow-custom: 0 10px 15px -3px rgba(154, 102, 192, 0.1), 0 4px 6px -2px rgba(154, 102, 192, 0.05);
+        }
+        .font-elegant { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        body { background-color: var(--color-bg); color: var(--color-text); }
+        /* Transição suave para modais e botões */
+        .transition-all { transition: all 0.3s ease-in-out; }
+
+        /* Estilo do Carrossel: Define a transição para as rolagens */
+        #carouselSlides {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-body antialiased">
+
+    <!-- Conteúdo Principal do Convite -->
+    <div class="max-w-4xl mx-auto p-4 sm:p-8">
+
+        <!-- Seção 1: Cabeçalho e Contagem Regressiva -->
+        <header class="text-center py-10 bg-[var(--color-primary-light)] rounded-xl shadow-custom mb-10">
+            <p class="text-lg text-[var(--color-accent)] mb-2 font-body font-light">Com grande alegria convidamos você para celebrar</p>
+            <h1 class="text-6xl sm:text-7xl font-elegant font-bold text-[var(--color-accent)] leading-tight">
+                Meus 15 Anos
+            </h1>
+            <h2 class="text-4xl sm:text-5xl font-elegant font-bold text-[var(--color-text)] mt-2">
+                Débora
+            </h2>
+
+            <div id="countdown" class="mt-8 flex justify-center space-x-4 sm:space-x-8">
+                <!-- Estrutura da Contagem Regressiva -->
+                <div class="text-center">
+                    <div id="days" class="text-4xl sm:text-5xl font-elegant text-[var(--color-accent)] font-bold">00</div>
+                    <div class="text-sm font-body text-[var(--color-text)] uppercase tracking-wider mt-1">Dias</div>
+                </div>
+                <div class="text-center">
+                    <div id="hours" class="text-4xl sm:text-5xl font-elegant text-[var(--color-accent)] font-bold">00</div>
+                    <div class="text-sm font-body text-[var(--color-text)] uppercase tracking-wider mt-1">Horas</div>
+                </div>
+                <div class="text-center">
+                    <div id="minutes" class="text-4xl sm:text-5xl font-elegant text-[var(--color-accent)] font-bold">00</div>
+                    <div class="text-sm font-body text-[var(--color-text)] uppercase tracking-wider mt-1">Minutos</div>
+                </div>
+                <div class="text-center">
+                    <div id="seconds" class="text-4xl sm:text-5xl font-elegant text-[var(--color-accent)] font-bold">00</div>
+                    <div class="text-sm font-body text-[var(--color-text)] uppercase tracking-wider mt-1">Segundos</div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- NOVO: Seção da Foto Principal da Aniversariante -->
+        <section class="mb-10 rounded-xl shadow-custom overflow-hidden">
+            <!-- ALTERAR: Substitua o placeholder pela URL da foto principal -->
+            <!-- Recomendação: Imagem horizontal (proporção 2:1 ou 16:9) para celular e PC -->
+            <img src="imgs/FOTO DO TOPO DO CONVITE (1).jpg" 
+                 alt="Foto Principal da Aniversariante" 
+                 class="w-full h-auto object-cover aspect-[2/1]">
+        </section>
+
+        <!-- Seção 2: Detalhes do Evento -->
+        <section class="bg-white p-6 sm:p-10 rounded-xl shadow-custom mb-10 border border-[var(--color-primary-medium)]">
+            <h3 class="text-3xl font-elegant font-bold text-[var(--color-accent)] mb-6 text-center border-b pb-3 border-[var(--color-primary-medium)]">
+                Detalhes da Celebração
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <!-- Data e Hora -->
+                <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                    <svg class="w-8 h-8 mx-auto mb-2 text-[var(--color-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <p class="font-bold text-lg">Data & Hora</p>
+                    <p class="text-[var(--color-text)] mt-1">
+                        <!-- ALTERAR: Data e Hora -->
+                        Sexta, 16 de Janeiro<br>19:30h
+                    </p>
+                </div>
+
+                <!-- Local -->
+                <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                    <svg class="w-8 h-8 mx-auto mb-2 text-[var(--color-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <p class="font-bold text-lg">Local</p>
+                    <p class="text-[var(--color-text)] mt-1">
+                        <!-- ALTERAR: Nome do Local -->
+                        Salão de Festas Palace Hall - Casa de Cristal
+                    </p>
+                    <a href="https://maps.app.goo.gl/BvkTuBwx9Si6mNRy9" target="_blank" class="text-sm mt-2 inline-block text-[var(--color-accent)] hover:text-purple-700 transition-all font-semibold">
+                        <!-- ALTERAR: Link para o Google Maps -->
+                        Ver o Trajeto no Mapa
+                    </a>
+                </div>
+
+                <!-- Confirmação de Presença -->
+                <div class="p-4 rounded-lg bg-gray-50 border border-gray-200">
+                    <svg class="w-8 h-8 mx-auto mb-2 text-[var(--color-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12h-4m0 0l4-4m-4 4l-4 4"></path></svg>
+                    <p class="font-bold text-lg">Confirme sua Presença</p>
+                    <p class="text-[var(--color-text)] mt-1">Por favor, confirme até 10/12/2025.</p>
+                    <!-- ALTERAR: Número e Mensagem do WhatsApp -->
+                    <a href="#" id="rsvpButton" target="_blank" class="mt-3 inline-block bg-[var(--color-accent)] text-white py-2 px-4 rounded-full shadow-lg hover:bg-purple-700 transition-all font-semibold">
+                        Confirmar via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Galeria de Fotos (Carrossel Auto-Rola) -->
+        <section class="mb-10">
+            <h3 class="text-3xl font-elegant font-bold text-[var(--color-accent)] mb-6 text-center">
+                Momentos Especiais
+            </h3>
+
+            <!-- Estrutura do Carrossel que exibe uma foto por vez -->
+            <div class="relative w-full overflow-hidden rounded-xl shadow-custom border border-[var(--color-primary-medium)]" id="imageCarousel">
+                <div class="flex" id="carouselSlides">
+                    <!-- SLIDE 1: ADICIONAR IMAGEM AQUI -->
+                    <div class="carousel-slide flex-shrink-0 w-full aspect-[4/3] sm:aspect-video">
+                        <img src="imgs/FOTO DA CAPA DO CONVITE.jpg" alt="Foto Carrossel 1" class="w-full h-full object-cover">
+                    </div>
+                    <!-- SLIDE 2 -->
+                    <div class="carousel-slide flex-shrink-0 w-full aspect-[4/3] sm:aspect-video">
+                        <img src="imgs/FOTO DO FINAL DO CONVITE.jpg" alt="Foto Carrossel 2" class="w-full h-full object-cover">
+                    </div>
+                    <!-- SLIDE 3 -->
+                    <div class="carousel-slide flex-shrink-0 w-full aspect-[4/3] sm:aspect-video">
+                        <img src="imgs/FOTO DO TOPO DO CONVITE (1).jpg" alt="Foto Carrossel 3" class="w-full h-full object-cover">
+                    </div>
+                    <!-- ADICIONE MAIS DIVs COM A CLASSE "carousel-slide" E SUAS IMAGENS AQUI -->
+                </div>
+
+                <!-- Indicadores (Pontos) -->
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2" id="carouselIndicators">
+                    <!-- Os pontos são gerados automaticamente pelo JS -->
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-gray-500 mt-4">
+                A delicadeza da menina encontra a força da mulher. Um brinde à transformação!
+            </p>
+        </section>
+
+
+        <!-- Seção 4: Botões de Ação (Vestimenta e Presentes) -->
+        <section class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-10">
+            <!-- Botão Vestimenta -->
+            <button onclick="showModal('vestimentaModal')" class="bg-white text-[var(--color-accent)] border border-[var(--color-accent)] py-3 px-8 rounded-full shadow-lg hover:bg-[var(--color-accent)] hover:text-white transition-all font-semibold text-lg">
+                <span class="mr-2">👗</span> Detalhes da Vestimenta
+            </button>
+
+            <!-- Botão Presentes -->
+            <button onclick="showModal('presentesModal')" class="bg-white text-[var(--color-accent)] border border-[var(--color-accent)] py-3 px-8 rounded-full shadow-lg hover:bg-[var(--color-accent)] hover:text-white transition-all font-semibold text-lg">
+                <span class="mr-2">🎁</span> Sugestão de Presentes
+            </button>
+        </section>
+    </div>
+
+    <!-- MODAL 1: Vestimenta -->
+    <div id="vestimentaModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden transition-all" onclick="hideModal('vestimentaModal')">
+        <div class="bg-[var(--color-bg)] rounded-xl max-w-lg w-full p-8 shadow-2xl transform scale-95 transition-all" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-start border-b pb-3 mb-4">
+                <h3 class="text-3xl font-elegant font-bold text-[var(--color-accent)]">
+                    Traje Sugerido
+                </h3>
+                <button onclick="hideModal('vestimentaModal')" class="text-gray-500 hover:text-gray-900 transition-all text-2xl leading-none">
+                    &times;
+                </button>
+            </div>
+            <p class="text-lg text-[var(--color-text)] mb-4">
+                Para tornar nosso momento ainda mais especial e harmonioso, sugerimos o traje:
+            </p>
+            <p class="text-3xl font-elegant font-bold text-center text-black bg-[var(--color-primary-light)] p-4 rounded-lg border border-[var(--color-primary-medium)] shadow-inner">
+                ESPORTE FINO
+            </p>
+            <p class="mt-4 text-sm text-gray-600">
+                Uma combinação perfeita entre elegância e conforto! Recomendamos evitar roupas brancas longas (reservadas à debutante).
+            </p>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Presentes -->
+    <div id="presentesModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden transition-all" onclick="hideModal('presentesModal')">
+        <div class="bg-[var(--color-bg)] rounded-xl max-w-lg w-full p-8 shadow-2xl transform scale-95 transition-all" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-start border-b pb-3 mb-4">
+                <h3 class="text-3xl font-elegant font-bold text-[var(--color-accent)]">
+                    Sugestão de Presentes
+                </h3>
+                <button onclick="hideModal('presentesModal')" class="text-gray-500 hover:text-gray-900 transition-all text-2xl leading-none">
+                    &times;
+                </button>
+            </div>
+
+            <p class="text-lg text-[var(--color-text)] mb-4">
+                Se desejar presentear de uma forma especial, o que realmente importa é o carinho! <span class="text-red-500">❤️</span>
+            </p>
+
+            <div class="bg-[var(--color-primary-light)] p-4 rounded-lg mb-4 border border-[var(--color-primary-medium)]">
+                <p class="font-bold text-lg text-[var(--color-accent)] mb-2">Opção 1: Presente Digital (PIX)</p>
+                <p class="text-sm font-body">
+                    <strong>Chave Pix (CPF):</strong> <span class="text-black">(21) 99154-8061</span>
+                    <button onclick="copyToClipboard('059.468.650-48', this)" class="ml-2 text-xs bg-[var(--color-accent)] text-white px-2 py-0.5 rounded hover:bg-purple-700 transition-all">
+                        Copiar
+                    </button>
+                    <span id="copyMessage" class="ml-2 text-xs text-green-600 opacity-0 transition-opacity">Copiado!</span>
+                </p>
+            </div>
+
+            <p class="font-bold text-lg text-[var(--color-accent)] mb-2">Opção 2: Lista de Desejos</p>
+            <ul class="list-disc list-inside space-y-1 ml-4 text-[var(--color-text)]">
+                <!-- ALTERAR: Lista de Presentes -->
+                <li>Acessórios prata ou dourado: Brinco, Colar, Anel, Pulseira (Rommanel, Mapa da Mina)</li>
+                <li>Bolsas</li>
+                <li>Perfumes doce, Hidratante, Body Splash (Natura, O Boticário), maquiagem,Gloss (Francine Ehlke)</li>
+                <li>Sapato/tênis  tam. 38</li>
+                <li>Cartão Presente (Renner, C&A, Riachuelo, Sonho dos Pés,  Sapatella)</li>
+                <!-- ADICIONAR/REMOVER ITENS AQUI -->
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- JavaScript para Lógica de Contagem Regressiva, Modais e Carrossel -->
+    <script>
+        // ALTERAR: Defina a data e hora do evento
+    // Formato: Ano, Mês (0-11), Dia, Hora, Minuto, Segundo
+    const eventDate = new Date("2026-01-16T19:30:00").getTime(); // Exemplo: 25 de Dezembro de 2024 às 20:00
+
+    // --- Lógica de Confirmação de Presença (RSVP) ---
+    // Localiza o botão pelo seu novo ID
+    function getRsvpButton() {
+        return document.getElementById('rsvpButton');
+    }
+
+    /**
+     * Lida com o clique na confirmação de presença (RSVP).
+     * Ele primeiro marca a presença no localStorage antes de redirecionar para o WhatsApp.
+     */
+    const RSVP_KEY = 'debora_15_rsvp_confirmed'; 
+    const WHATSAPP_LINK = "https://api.whatsapp.com/send?phone=555194436292&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada+no+niver+da+[NOME]";
+
+    /**
+     * Lida com o clique na confirmação de presença (RSVP).
+     * Garante o redirecionamento para o WhatsApp.
+     */
+    function handleRsvpClick() {
+        const button = getRsvpButton();
+        
+        // CRUCIAL: Abre o link do WhatsApp em uma nova aba (target="_blank")
+        window.open(WHATSAPP_LINK, '_blank');
+        
+        // 1. Salva o status de confirmação no localStorage
+        localStorage.setItem(RSVP_KEY, 'true');
+
+        // 2. Desabilita visualmente o botão (e altera o texto)
+        disableRsvpButton(button, true); 
+    }
+
+    /**
+     * Verifica o localStorage e desabilita o botão se a presença já foi marcada.
+     */
+    function checkRsvpStatus() {
+        const button = getRsvpButton();
+        
+        if (!button) return; 
+
+        const isConfirmed = localStorage.getItem(RSVP_KEY) === 'true';
+
+        if (isConfirmed) {
+            disableRsvpButton(button, false);
+        } else {
+            // Se AINDA NÃO FOI CONFIRMADO, adiciona o evento de clique
+            button.onclick = handleRsvpClick;
+            // O link de fallback pode ser o WhatsApp aqui, mas o onclick deve prevalecer
+            button.href = WHATSAPP_LINK; 
+        }
+    }
+
+    /**
+     * Aplica os estilos de desabilitado ao botão.
+     * @param {HTMLElement} button - O elemento <a> do botão.
+     * @param {boolean} isFirstClick - Se é o clique inicial ou apenas a checagem ao carregar.
+     */
+    function disableRsvpButton(button, isFirstClick) {
+        // Remove o link para que não possa ser clicado novamente
+        button.removeAttribute('onclick');
+        button.style.pointerEvents = 'none'; // Impede o clique em navegadores modernos
+        
+        // Altera o estilo para indicar que está desabilitado
+        button.classList.remove('bg-[var(--color-accent)]', 'hover:bg-purple-700');
+        button.classList.add('bg-gray-400', 'cursor-not-allowed');
+
+        // Altera o texto para indicar o status
+        const newText = isFirstClick ? 'Presença Marcada! ✅' : 'Presença Confirmada ✅';
+        button.innerHTML = newText;
+        
+        // Encontra o elemento pai (<p>) e o remove do DOM para manter o layout limpo
+        const parentContainer = button.closest('.p-4');
+        if (parentContainer) {
+            // Encontra o parágrafo de instrução e remove
+            const instructionP = parentContainer.querySelector('p:nth-child(3)'); 
+            if(instructionP) instructionP.remove();
+            
+            // Coloca o novo texto no centro
+            button.style.width = '100%';
+        }
+    }
+
+
+    // --- Lógica de Contagem Regressiva ---
+    function startCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+            document.getElementById("countdown").innerHTML = '<p class="text-2xl font-elegant font-bold text-red-500">A FESTA COMEÇOU! 🎉</p>';
+            return;
+        }
+
+        // Cálculo dos dias, horas, minutos e segundos
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Adiciona zero à esquerda se necessário
+        const pad = (n) => n < 10 ? '0' + n : n;
+
+        // Atualiza os elementos no DOM
+        document.getElementById("days").innerHTML = pad(days);
+        document.getElementById("hours").innerHTML = pad(hours);
+        document.getElementById("minutes").innerHTML = pad(minutes);
+        document.getElementById("seconds").innerHTML = pad(seconds);
+    }
+
+    // --- Lógica do Carrossel ---
+    const carouselSlidesContainer = document.getElementById('carouselSlides');
+    const carouselIndicatorsContainer = document.getElementById('carouselIndicators');
+    // Usa querySelectorAll para pegar todas as imagens dentro dos containers de slide
+    const slides = document.querySelectorAll('.carousel-slide'); 
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function createIndicators() {
+        carouselIndicatorsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'mx-1', 'transition-all');
+            dot.setAttribute('data-index', i);
+            dot.onclick = () => goToSlide(i);
+            carouselIndicatorsContainer.appendChild(dot);
+        }
+        updateIndicators();
+    }
+
+    function updateCarousel() {
+        // Calcula o deslocamento em porcentagem
+        const offset = -currentIndex * 100;
+        carouselSlidesContainer.style.transform = `translateX(${offset}%)`;
+        updateIndicators();
+    }
+
+    function updateIndicators() {
+        document.querySelectorAll('#carouselIndicators button').forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.remove('bg-white', 'opacity-50');
+                dot.classList.add('bg-[var(--color-accent)]', 'opacity-100', 'shadow-md');
+            } else {
+                dot.classList.remove('bg-[var(--color-accent)]', 'opacity-100', 'shadow-md');
+                dot.classList.add('bg-white', 'opacity-50');
+            }
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        // Reseta o timer de auto-slide ao interagir manualmente
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 2000); // 2 segundos
+    }
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    // --- Lógica dos Modais ---
+    function showModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function hideModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.querySelector('div').classList.remove('scale-100');
+        modal.querySelector('div').classList.add('scale-95');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; 
+        }, 300); 
+    }
+
+    // --- Lógica de Copiar para Clipboard ---
+    function copyToClipboard(text, button) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed'; 
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        
+        try {
+            const successful = document.execCommand('copy');
+            if (successful) {
+                const messageElement = document.getElementById('copyMessage');
+                messageElement.classList.remove('opacity-0');
+                messageElement.classList.add('opacity-100');
+                button.textContent = 'Copiado!';
+                setTimeout(() => {
+                    messageElement.classList.remove('opacity-100');
+                    messageElement.classList.add('opacity-0');
+                    button.textContent = 'Copiar';
+                }, 2000);
+            }
+        } catch (err) {
+            console.error('Falha ao tentar copiar texto: ', err);
+        }
+        
+        document.body.removeChild(textarea);
+    }
+
+    // Inicialização de todos os componentes
+    window.onload = function() {
+        // **NOVO**: Verifica o status do RSVP
+        checkRsvpStatus();
+        
+        // Inicia a contagem regressiva e o intervalo
+        startCountdown();
+        setInterval(startCountdown, 1000);
+
+        // Inicia o carrossel se houver slides
+        if (totalSlides > 0) {
+            createIndicators();
+            autoSlideInterval = setInterval(autoSlide, 2000); // 2 segundos
+        }
+    };
+    </script>
+
+</body>
+</html>
